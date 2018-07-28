@@ -52,8 +52,7 @@ public class CreateAppend {
             StandardOpenOption.APPEND  // Bytes will be written to the end of
                                        // the file rather than the beginning
         };
-        try (BufferedWriter bw = Files.newBufferedWriter(path, charSet, options);
-                ) {
+        try (BufferedWriter bw = Files.newBufferedWriter(path, charSet, options)) {
             bw.write(text);
         }
     }
